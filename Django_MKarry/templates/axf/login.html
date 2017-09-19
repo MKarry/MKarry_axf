@@ -1,0 +1,37 @@
+{% extends 'axf/base.html' %}
+{% load static from staticfiles %}
+
+{% block linkscript %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'mine/css/login.css' %}"/>
+    <script type="text/javascript" src="{% static 'mine/js/login.js' %}"></script>
+{% endblock linkscript %}
+
+{% block base %}
+
+    <div id="login">
+        <a href="{% url 'axf:mine' %}"><p>&lt;返回</p></a>
+        <div id="box">
+            <form action="" method="post" class="form-horizontal">
+
+                <div class="input-group">
+                    <span class="input-group-addon">账号</span>
+                    <input type="text" id="ui" class="form-control" aria-describedby="basic-addon1" name="userAccount" >
+
+                </div>
+                <div class="input-group">
+                <span class="input-group-addon">密码</span>
+                <input id="pi" type="text" class="form-control" aria-describedby="basic-addon1" name="userPasswd">
+            </div>
+            <button type="button" id="loginBtn">登录</button>
+        </form>
+        <p id="errorp">账号密码错误</p>
+    </div>
+    </div>
+
+            </form>
+        </div>
+    </div>
+
+
+{% endblock base %}
